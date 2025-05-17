@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from typing import Optional
+from datetime import datetime
 
 class ProductBase(BaseModel):
     name: str
@@ -16,7 +17,7 @@ class ProductUpdate(BaseModel):
 
 class Product(ProductBase):
     id: int
-    created_at: str
+    created_at: datetime
 
     class Config:
         orm_mode = True

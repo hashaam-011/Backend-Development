@@ -6,7 +6,7 @@ from app.main import app
 from app.database import Base, get_db
 from app.models import Category, Product, Sale, Inventory
 
-# Test database setup
+
 SQLALCHEMY_DATABASE_URL = "sqlite:///./test.db"
 engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
 TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
